@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Form</title>
+    <style>
+        /* CSS for form-style layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e18d8d;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="image"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:last-of-type,
+        input[type="number"]:last-of-type {
+            margin-bottom: 30px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="/add_course" method="POST" enctype ="multipart/form-data" >
+
+        <label for="Title">Course Title</label>
+        <input type="text" name="Title" id="Title">
+
+        <label for="image">Course Image</label>
+        <input type="file" name="image" id="image">
+
+        <label for="Description">Description</label>
+        <input type="text" name="Description" id="Description">
+
+        <label for="Price">Price</label>
+        <input type="number" name="Price" id="Price">
+
+        <label for="Duration">Duration</label>
+        <input type="text" name="Duration" id="Duration" placeholder="weeks/months">
+
+        <label for="Instructor">Instructor</label>
+        <input type="text" name="Instructor" id="Instructor" placeholder="Name of the instructor">
+
+        <input type="submit" value="Submit">
+
+    </form>
+    
+</body>
+</html>

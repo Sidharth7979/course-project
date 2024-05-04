@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title></title>
+
+    <style>
+      /* CSS for basic styling */
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 0;
+      }
+
+      .container {
+          max-width: 400px;
+          margin: 20px auto;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          overflow-x: hidden;
+      }
+
+      h1, h2 {
+          text-align: center;
+      }
+
+      img {
+          display: block;
+          margin: 0 auto;
+          border-radius: 5px;
+          margin-bottom: 20px;
+      }
+
+      label {
+          font-weight: bold;
+      }
+
+      p {
+          margin-bottom: 10px;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+          width: calc(100% - 22px);
+          padding: 8px;
+          margin-bottom: 20px;
+          border: 1px solid black;
+          border-radius: 50px;
+          box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          display: block;
+          margin: 0 auto;
+      }
+
+      input[type="submit"]:hover {
+          background-color: #0056b3;
+      }
+      .container {
+      margin-top: 20px;
+     
+  
+      
+    }
+    .course-card {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 10px 10px 10px rgba(229, 219, 219, 0.1);
+      height:auto; /* Fixed height for the course card */
+      /* margin-bottom: 20px; */
+      margin-top: 50px;
+      background-color: yellowgreen;
+      border-radius: 30px;
+    }
+    .course-card:hover{ background-color: yellow;
+                 cursor: pointer;
+    }
+    .course-card img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+      width: 500px; /* Fixed width for the images */
+      height: 250px; /* Fixed height for the images */
+      border-radius: 5px;
+      margin-bottom: 10px;
+      border-radius: 30px;
+    }
+    .course-card p {
+      margin-bottom: 5px;
+    }
+    .popo{
+      height: 300px;
+      width: 500px;
+      margin: 1px;
+      padding: 25px;
+      margin-top: 20px;
+    }
+    .price{ position: relative;
+      left: 390px;
+      bottom:180px;}
+
+.instructor{
+  position: relative;
+  left: 380px;
+  bottom:180px;
+}
+
+
+  /* register page */
+
+#registerpage {
+  position: fixed;
+  top: 40px;
+  left: 500px;
+  /* border: 2px solid black; */
+  display: none;
+  
+}
+
+#registerpage form {
+  background-color: #fff;
+  padding: 20px; /* Reduced padding */
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 320px; /* Reduced width */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px; /* Reduced margin */
+  font-weight: bold;
+  font-size: 14px; /* Reduced font size */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+  width: calc(100% - 16px); /* Adjusted width */
+  padding: 6px; /* Reduced padding */
+  margin-bottom: 12px; /* Reduced margin */
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 14px; /* Reduced font size */
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px; /* Reduced padding */
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px; /* Reduced font size */
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+h1 {
+  text-align: center;
+  font-size: 18px; /* Reduced font size */
+}
+
+.btn-close {
+  margin-left: 250px; /* Adjusted margin */
+  margin-top: 12px; /* Reduced margin */
+}
+
+    
+  </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Course</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="add_course">ADD Course</a>
+            </li>
+          
+     
+          </ul>
+          <form class="d-flex" role="search" action="/add_course" method="post"  enctype="multipart/form-data">
+            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+          </form>
+          <form action="/logout" method="get">
+            <button class="btn btn-outline-success mx-2" type="submit" onclick="logout()">Logout</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+<!-- the main courses r here -->
+
+
+    <div class="container">
+      <div class="row" onclick="setCourseID(event)">
+        <% sidharths.forEach(function(item,index) { %>
+        <div class="col-md-6">
+          <div class="course-card">
+
+
+            <!-- course id for backend -->
+
+            <input type="hidden" id="maincourse_<%= index %>" name="courseID" value="<%= index %>">
+            <img class="moto" src="<%= item.Image %>" alt="Course Image">
+            <div>
+              <div class="popo">
+                <label for="title">Title:</label>
+                <p><%= item.Title %></p>
+                <label for="duration">Duration:</label>
+                <p><%= item.Duration %></p>
+                <label for="description">Description:</label>
+                <p><%= item.Description %></p>
+                <label class="price" for="price">Price:</label>
+                <p class="price"><%= item.Price %></p>
+                <label class="instructor" for="instructor">Instructor:</label>
+                <p class="instructor"><%= item.Instructor %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+    
+    <!-- register pop up page -->
+    
+    <div id="registerpage">
+      <form action="/register" method="post">
+        <h1>Add User</h1>
+        
+        <button type="button" class="btn-close" aria-label="Close" onclick="closeRegistrationModal()"></button>
+
+        <label for="name">Name</label>
+        <input type="text" name="username" id="name" required>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="number">Phone Number</label>
+        <input type="number" name="number" id="number" pattern="[0-9]{10}" required title="Please enter a 10 digit phone number">
+        <input type="hidden" id="registeridone" name="finalcourseID" value="">
+        <input type="submit" value="Register">
+        
+      </form>
+    </div>
+    
+
+
+
+
+
+    <script>
+      // this is not working
+      // function setCourseID(event) {
+      //   if (event.target.tagName.toLowerCase() === 'input') return; // If clicked on input, ignore
+      //   const courseIndex = event.target.querySelector('input[name="courseID"]').value;
+      //   document.getElementById('registeridone').value = courseIndex;
+      //   document.getElementById("registerpage").style.display = "block";
+      // }
+
+
+      // this is working
+      document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.container').addEventListener('click', function(event) {
+        if (event.target.classList.contains('course-card') || event.target.closest('.course-card')) {
+            // If clicked on the course card or its descendant elements
+            const courseIndex = event.target.closest('.course-card').querySelector('input[name="courseID"]').value;
+            document.getElementById('registeridone').value = courseIndex;
+            document.getElementById("registerpage").style.display = "block";
+        }
+    });
+});
+
+      
+    </script>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<!-- onclick fuction -->
+
+<script>
+
+        function logout() {
+            
+            alert('click ok ! You have been logged out.');
+        };
+
+
+        
+
+
+  
+
+// Function to close the registration pop-up modal
+function closeRegistrationModal() {
+    // Get the modal element
+    var registrationModal = document.getElementById('registerpage');
+    registerpage.style.display = 'none';
+}
+
+
+
+
+</script>
+  </body>
+</html>
